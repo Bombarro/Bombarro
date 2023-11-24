@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Plan entrenamiento</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Roboto;
+    }
+	
+	button {
+      font-size: 20px;
+      background-color: #4CAF50;
+      width: 90%;
+	    margin-left: 5%;
+      height: 60px;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    button:hover {
+      background-color: #45a049;
+    }
+
+    .button-peso{
+      background-color: #31785C;
+    }
+    .button-peso:hover{
+      background-color: #3B9D76;
+    }
+    .button-nutri{
+      background-color: #1B5883;
+    }
+    .button-nutri:hover{
+      background-color: #2678B2;
+    }
+    .button-pasos{
+      background-color: #1392DF;
+    }
+    .button-pasos:hover{
+      background-color: #2BAFFF;
+    }
+    .button-sue{
+      background-color: #22106E;
+    }
+    .button-sue:hover{
+      background-color: #5A49A3;
+    }
+    .button-tie{
+      background-color: #C55D00;
+    }
+    .button-tie:hover{
+      background-color: #F07202;
+    }
+    .button-gra{
+      background-color: #404040;
+    }
+    .button-gra:hover{
+      background-color: #4F4F4F;
+    }
+    
+
+    .texto-mostrar {
+      font-size: 20px;
+      width: 90%;
+	    margin-left: 5%;
+      color: #000275;
+      border: 2px;
+      border-radius: 5px;
+      font-weight: bold;
+      text-align: center;
+    }
+
+    .container {
+      width: 400px;
+      margin: 0 auto;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .header {
+      background-color: #ffffff;
+      color: #ffffff;
+      height: 29px;
+      position: absolute;
+      width: 100%;
+      top: 0;
+      left: 0;
+    }
+
+    .footer {
+      background-color: #ffffff;
+      color: #ffffff;
+      height: 56px;
+      position: absolute;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+
+    .content {
+      margin-top: 0px; /* Ajusta según la altura de tu cabecera */
+      margin-bottom: 0px; /* Ajusta según la altura de tu pie */
+    }
+
+    /* Estilos para la hoja de Google Sheets (solo un ejemplo) */
+    
+	#googleSheetCal {
+	    margin-left: 3%;
+      width: 94%;
+      height: 600px;
+      border: 0px solid #ccc;
+    }
+	#googleSheetEnt {
+      margin-left: 3%;
+      width: 94%;
+      height: 630px;
+      border: 0px solid #ccc;
+    }
+  #googleSheetEnt2 {
+      margin-left: 3%;
+      width: 94%;
+      height: 1050px;
+      border: 0px solid #ccc;
+    }
+  #googleSheetEnt3 {
+      margin-left: 3%;
+      width: 94%;
+      height: 900px;
+      border: 0px solid #ccc;
+    }
+
+  #googleSheetPeso {
+      margin-left: 3%;
+      width: 94%;
+      height: 190px;
+      border: 1px solid #ccc;
+    }
+	#googleSheetNutri {
+      margin-left: 3%;
+      width: 94%;
+      height: 2250px;
+      border: 0px solid #ccc;
+    }
+
+  </style>
+</head>
+<body>
+<!-- CALENDARIO  ------------------------------------------------------------------------------------------------------------>
+<div id="calendario" class="container" style="height: 410px;">
+  <div class="header"></div>
+  <div class="content">
+    <iframe
+		id="googleSheetCal"
+		src="https://docs.google.com/spreadsheets/d/1heeZOwphVlQLRYUctiW5Z-aY7jnKDDk7IsPLkM0m72k/pubhtml?widget=false&amp;headers=false&amp;single=true&amp;gid=1467508002&amp;rm=minimal"
+		frameborder="0"
+		allowfullscreen="true"
+    scrolling="no">
+	</iframe>
+  </div>
+  
+</div>
+
+<div class="container" style="margin-top:10px"></div>
+<!-- ENTRENAMIENTO  --------------------------------------------------------------------------------------------------------->
+    <!-- Botón  ---------------------------------------------------->
+<div id="boton_plan" class="container">
+  <button onclick="toggleDivs('info_entr', 'boton_plan')">PLAN DE ENTRENAMIENTO</button>
+  <div class="container" style="margin-top:10px"></div>
+</div>
+    <!-- Mostrar  -------------------------------------------------->
+<div id="info_entr" style="display: none">
+      <!-- Gráficos  ********************** --->
+    <div class="container">
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="130" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1815306865&amp;format=interactive"></iframe>
+      <iframe width="400" height="205" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1761055802&amp;format=interactive"></iframe>
+    </div>
+      <!-- Sheets  ************************ --->
+    <div class="container">
+      <div class="header"></div>
+      <div class="content">
+      <iframe
+        id="googleSheetEnt"
+        src="https://docs.google.com/spreadsheets/d/1heeZOwphVlQLRYUctiW5Z-aY7jnKDDk7IsPLkM0m72k/pubhtml?widget=false&amp;headers=false&amp;single=true&amp;gid=947789052&amp;rm=minimal"
+        frameborder="0"
+        allowfullscreen="true"
+        scrolling="no">
+      </iframe>
+      </div>
+      <div class="footer"></div>
+    </div>
+        <!-- Formulario  ******************** --->
+  <div class="container">
+    <div class="content">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfZVwlHOcQBFL7LFQiOa-pvHQz_EMZTsiMqm6CE_MK114Ijqg/viewform?embedded=true" width="400" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+  </div>
+      <!-- Sheets 2 *********************** --->
+    <div class="container">
+      <div class="header"></div>
+      <div class="content">
+      <iframe
+        id="googleSheetEnt2"
+        src="https://docs.google.com/spreadsheets/d/1heeZOwphVlQLRYUctiW5Z-aY7jnKDDk7IsPLkM0m72k/pubhtml?widget=false&amp;headers=false&amp;single=true&amp;gid=1375483654&amp;rm=minimal"
+        frameborder="0"
+        allowfullscreen="true"
+        scrolling="no">
+      </iframe>
+      </div>
+      <div class="footer"></div>
+    </div>
+
+      <!-- Sheets 3 *********************** --->
+    <div class="container">
+      <div class="header"></div>
+      <div class="content">
+      <iframe
+        id="googleSheetEnt3"
+        src="https://docs.google.com/spreadsheets/d/1heeZOwphVlQLRYUctiW5Z-aY7jnKDDk7IsPLkM0m72k/pubhtml?widget=false&amp;headers=false&amp;single=true&amp;gid=861903102&amp;rm=minimal"
+        frameborder="0"
+        allowfullscreen="true"
+        scrolling="no">
+      </iframe>
+      </div>
+      <div class="footer"></div>
+    </div>
+</div>
+
+<!-- PESO  ------------------------------------------------------------------------------------------------------------------>
+    <!-- Botón  ---------------------------------------------------->
+<div id="boton_peso" class="container">
+	<button class="button-peso" onclick="toggleDivs('info_peso', 'boton_peso')">PESO</button>
+  <div class="container" style="margin-top:10px"></div>
+</div>
+    <!-- Mostrar  -------------------------------------------------->
+<div id="info_peso" style="display: none">
+      <!-- Gráficos  ********************** --->
+  <div class="container">
+    <div class="content">
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=2000946114&amp;format=interactive"></iframe>
+      <iframe width="400" height="121" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=923553492&amp;format=interactive"></iframe>
+      <iframe width="400" height="50" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=642126549&amp;format=interactive"></iframe>
+      <iframe width="400" height="50" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=903247598&amp;format=interactive"></iframe>
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="121" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1025129233&amp;format=interactive"></iframe>
+      
+    </div>
+  </div>
+      <!-- Formulario  ******************** --->
+  <div class="container">
+    <div class="content">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeKPOLTqCAnbSfvXcuPyRBpohPZ-Omb1_62uUdIkyDgsP-mKw/viewform?embedded=true" width="400px" height="600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+  </div>
+</div>
+
+<!-- PLAN NUTRICIONAL  ------------------------------------------------------------------------------------------------------------->
+    <!-- Botón  ---------------------------------------------------->
+<div id="boton_nutri" class="container">
+	<button class="button-nutri" onclick="toggleDivs('info_nutri', 'boton_nutri')">PLAN NUTRICIONAL</button>
+  <div class="container" style="margin-top:10px"></div>
+</div>
+    <!-- Mostrar  -------------------------------------------------->
+<div id="info_nutri" style="display: none">
+      <!-- Gráficos  ********************** --->
+  <div class="container">
+    <div class="content">
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="224" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=828082761&amp;format=interactive"></iframe>
+      <iframe width="400" height="73" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=487438188&amp;format=interactive"></iframe>
+      <iframe width="400" height="167" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=613120085&amp;format=interactive"></iframe>
+      <iframe width="400" height="148" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=336794922&amp;format=interactive"></iframe>
+    </div>
+  </div>
+      <!-- Sheets  ************************ --->
+  <div class="container">
+    <div class="header"></div>
+    <div class="content">
+    <iframe
+      id="googleSheetNutri"
+      src="https://docs.google.com/spreadsheets/d/1heeZOwphVlQLRYUctiW5Z-aY7jnKDDk7IsPLkM0m72k/pubhtml?widget=false&amp;headers=false&amp;single=true&amp;gid=1515620310&amp;rm=minimal"
+      frameborder="0"
+      allowfullscreen="true"
+      scrolling="no">
+    </iframe>
+    </div>
+    <div class="footer"></div>
+  </div>
+      <!-- Formulario  ******************** --->
+  <div class="container">
+    <div class="content">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSfPpoDHmGYYM80Xej5RYHsTjXd7rNjHHrTWgxHD_OslEclAHw/viewform?embedded=true" width="100%" height="1600" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+  </div>
+</div>
+
+<!-- PASOS  ------------------------------------------------------------------------------------------------------------------>
+    <!-- Botón  ---------------------------------------------------->
+<div id="boton_pasos" class="container">
+	<button class="button-pasos" onclick="toggleDivs('info_paso', 'boton_pasos')">PASOS</button>
+  <div class="container" style="margin-top:10px"></div>
+</div>
+    <!-- Mostrar  -------------------------------------------------->
+<div id="info_paso" style="display: none">
+      <!-- Gráficos  ********************** --->
+  <div class="container">
+    <div class="content">
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="190" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=315708783&amp;format=interactive"></iframe>
+      <iframe width="400" height="130" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1032868398&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1601571555&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1199057062&amp;format=interactive"></iframe>
+    </div>
+  </div>
+
+      <!-- Formulario  ******************** --->
+  <div class="container">
+    <div class="content">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSd9muRAyQhdPIA_G9KjJTex7PaNNyVdys3oekRIK_DVgr-5zQ/viewform?embedded=true" width="100%" height="700" frameborder="0" marginheight="0" marginwidth="0">Cargando…</iframe>
+    </div>
+  </div>
+</div>
+
+<!-- SUEÑO  ------------------------------------------------------------------------------------------------------------------>
+    <!-- Botón  ---------------------------------------------------->
+<div id="boton_sue" class="container">
+	<button class="button-sue" onclick="toggleDivs('info_sue', 'boton_sue')">SUEÑO</button>
+  <div class="container" style="margin-top:10px"></div>
+</div>
+    <!-- Mostrar  -------------------------------------------------->
+<div id="info_sue" style="display: none">
+      <!-- Gráficos  ********************** --->
+  <div class="container">
+    <div class="content">
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="155" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1405002268&amp;format=interactive"></iframe>
+      <iframe width="400" height="146" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1966443302&amp;format=interactive"></iframe>
+      <iframe width="400" height="210" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=2131595420&amp;format=interactive"></iframe>
+      <iframe width="400" height="90" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1570958589&amp;format=interactive"></iframe>
+      <iframe width="400" height="210" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=988682412&amp;format=interactive"></iframe>
+      <iframe width="400" height="195" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=402419352&amp;format=interactive"></iframe>
+      
+    </div>
+  </div>
+      <!-- Formulario  ******************** --->
+  <div class="container">
+    <div class="content">
+      <iframe 
+      src="https://docs.google.com/forms/d/e/1FAIpQLSeWm8NOZX_sYKMQyeVuXfakwUXCTm8hIs2jCcrFvvbvbsMuJw/viewform?embedded=true" 
+      width="100%" 
+      height="1400" 
+      frameborder="0" 
+      marginheight="0" 
+      marginwidth="0">Cargando…
+      </iframe>
+    </div>
+  </div>
+</div>
+
+<!-- EL TIEMPO  ------------------------------------------------------------------------------------------------------------------>
+    <!-- Botón  ---------------------------------------------------->
+<div id="boton_tie" class="container">
+	<button class="button-tie" onclick="toggleDivs('info_tie', 'boton_tie')">EL TIEMPO CALAHORRA</button>
+  <div class="container" style="margin-top:10px"></div>
+</div>
+    <!-- Mostrar  -------------------------------------------------->
+<div id="info_tie" style="display: none">
+      <!-- Gráficos  ********************** --->
+  <div class="container">
+    <div class="content">
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1586415672&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1822814863&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=171781812&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=2092028781&amp;format=interactive"></iframe>
+    </div>
+  </div>
+
+</div>
+
+<!-- COMPARATIVA GRÁFICAS PÁGINA PRINCIPAL  ------------------------------------------------------------------------------------------->
+    <!-- Botón  ---------------------------------------------------->
+<div id="boton_graf" class="container">
+  <button class="button-gra" onclick="toggleDivs('info_graf', 'boton_graf')">GRÁFICAS CONJUNTO</button>
+  <div class="container" style="margin-top:10px"></div>
+</div>
+    <!-- Mostrar  -------------------------------------------------->
+<div id="info_graf" style="display: none">
+  
+      <!-- Gráficos  ********************** --->
+  <div class="container">
+    <div class="content">
+      <div class="container" style="margin-top:20px"></div>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=56134550&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=841931729&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1713427661&amp;format=interactive"></iframe>
+      <iframe width="400" height="181" seamless frameborder="0" scrolling="no" src="https://docs.google.com/spreadsheets/d/e/2PACX-1vTu-Ueofr2yhOn3BywihzZouxt-fpJCR9iar2slAyn1-tlV_rk1JBJNYMbVgVHXND7y2XH0S7Q9lzvl/pubchart?oid=1097728345&amp;format=interactive"></iframe>
+      <div class="container" style="margin-top:30px"></div>
+    </div>
+  </div>
+</div>
+
+<!-- ESPACIO BLANCO AL FINAL  ------------------------------------------------------------------------------------------->
+<div class="container" style="margin-top:20px"></div>
+<!-- SCRIPTS  --------------------------------------------------------------------------------------------------------------->
+<script>
+
+  function toggleDivs(n_div, n_btn){
+    var div = document.getElementById(n_div);
+    var btn = document.getElementById(n_btn); 
+    var d_cal = document.getElementById("calendario");
+
+    var btn_ent = document.getElementById("boton_plan");
+    var btn_pes = document.getElementById("boton_peso");
+    var btn_nut = document.getElementById("boton_nutri");
+    var btn_pas = document.getElementById("boton_pasos");
+    var btn_sue = document.getElementById("boton_sue");
+    var btn_tie = document.getElementById("boton_tie");
+    var btn_gra = document.getElementById("boton_graf");
+
+    if (div.style.display === "none") {
+      //d_cal.style.display = "none";
+      div.style.display = "block";
+     
+      btn_ent.style.display = "none";
+      btn_pes.style.display = "none";
+      btn_nut.style.display = "none";
+      btn_pas.style.display = "none";
+      btn_sue.style.display = "none";
+      btn_tie.style.display = "none";
+      btn_gra.style.display = "none";
+    } else {
+      //d_cal.style.display = "block";
+      div.style.display = "none";
+
+      btn_ent.style.display = "block";
+      btn_pes.style.display = "block";
+      btn_nut.style.display = "block";
+      btn_pas.style.display = "block";
+      btn_sue.style.display = "block";
+      btn_tie.style.display = "block";
+      btn_gra.style.display = "block";
+    }
+    btn.style.display = "block";
+  }
+
+</script>
+
+</body>
+</html>
